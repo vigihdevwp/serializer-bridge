@@ -16,6 +16,7 @@ final class JsonTransformerFactory
         if (!class_exists($dtoClass)) {
             throw new SerializerException(sprintf('Class "%s" does not exist', $dtoClass));
         }
+
         return new GenericJsonTransformer($dtoClass);
     }
 }
