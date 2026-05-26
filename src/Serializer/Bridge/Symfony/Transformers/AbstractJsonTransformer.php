@@ -26,6 +26,7 @@ abstract class AbstractJsonTransformer implements TransformerInterface
         $classMetadataFactory = new ClassMetadataFactory(new AnnotationLoader());
         $nameConverter = new MetadataAwareNameConverter($classMetadataFactory);
         $encoders = [new JsonEncoder()];
+
         $normalizers = [
             new ObjectNormalizer(
                 $classMetadataFactory,
